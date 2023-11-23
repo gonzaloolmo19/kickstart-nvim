@@ -9,6 +9,7 @@ require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
 
 local lspkind = require 'lspkind'
+vim.api.nvim_set_hl(0, 'CmpNormal', { bg = '#1E1E2E' })
 
 cmp.setup {
     formatting = {
@@ -64,5 +65,11 @@ cmp.setup {
     sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
+    },
+    window = {
+        completion = {
+            border = 'rounded',
+            winhighlight = 'Normal:CmpNormal',
+        },
     },
 }

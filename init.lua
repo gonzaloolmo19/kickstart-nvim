@@ -112,10 +112,11 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim',  opts = {} },
+  { 'folke/which-key.nvim', opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
+    event = 'BufEnter',
     opts = {
       -- See `:help gitsigns.txt`
       signs = {
@@ -155,6 +156,7 @@ require('lazy').setup({
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
+    event = 'VeryLazy',
     -- See `:help lualine.txt`
     opts = {
       options = {
@@ -172,7 +174,12 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      indent = {
+        char = { '│' },
+      },
+    },
+    event = 'BufReadPre',
   },
 
   -- "gc" to comment visual regions/lines
@@ -181,6 +188,7 @@ require('lazy').setup({
   -- Fuzzy Finder (files, lsp, etc)
   {
     'nvim-telescope/telescope.nvim',
+    event = 'VeryLazy',
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
@@ -202,6 +210,7 @@ require('lazy').setup({
   {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    event = 'BufRead',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
     },

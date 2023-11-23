@@ -6,5 +6,11 @@ return {
     config = function()
       vim.cmd.colorscheme 'catppuccin'
     end,
+
+    integrations = {
+      cmp = true,
+      gitsigns = true,
+      treesitter = true,
+    },
   },
 }
