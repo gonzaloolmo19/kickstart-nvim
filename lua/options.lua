@@ -10,8 +10,10 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Ponemos la sangria como deseamos
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.opt.smartindent = true
+vim.opt.softtabstop = 4
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -48,4 +50,4 @@ vim.o.termguicolors = true
 --Hacemos que siempre haya al menos 8 lineas arriba y abajo del cursor
 vim.o.scrolloff = 8
 
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = '81'

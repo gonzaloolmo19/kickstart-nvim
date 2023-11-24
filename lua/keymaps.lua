@@ -46,17 +46,24 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Harpoon mappings
-vim.keymap.set('n', '<leader>hh', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', { desc = 'Toggle Harpoon menu' })
+vim.keymap.set('n', '<leader>hh', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>',
+  { desc = 'Toggle Harpoon menu' })
 vim.keymap.set('n', '<leader>ha', '<cmd>lua require("harpoon.mark").add_file()<CR>', { desc = 'Add file to Harpoon' })
-vim.keymap.set('n', '<leader>hu', '<cmd>lua require("harpoon.ui").nav_file(1)<CR>', { desc = 'Goto mark 1 (C-u)' })
-vim.keymap.set('n', '<leader>hi', '<cmd>lua require("harpoon.ui").nav_file(2)<CR>', { desc = 'Goto mark 2 (C-i)' })
-vim.keymap.set('n', '<leader>ho', '<cmd>lua require("harpoon.ui").nav_file(3)<CR>', { desc = 'Goto mark 3 (C-o)' })
-vim.keymap.set('n', '<leader>hp', '<cmd>lua require("harpoon.ui").nav_file(4)<CR>', { desc = 'Goto mark 4 (C-p)' })
+vim.keymap.set('n', '<leader>hu', '<cmd>lua require("harpoon.ui").nav_file(1)<CR>', { desc = 'Goto mark 1 (A-u)' })
+vim.keymap.set('n', '<leader>hi', '<cmd>lua require("harpoon.ui").nav_file(2)<CR>', { desc = 'Goto mark 2 (A-i)' })
+vim.keymap.set('n', '<leader>ho', '<cmd>lua require("harpoon.ui").nav_file(3)<CR>', { desc = 'Goto mark 3 (A-o)' })
+vim.keymap.set('n', '<leader>hp', '<cmd>lua require("harpoon.ui").nav_file(4)<CR>', { desc = 'Goto mark 4 (A-p)' })
 
-vim.keymap.set('n', '<C-u>', '<cmd>lua require("harpoon.ui").nav_file(1)<CR>', { desc = 'Goto mark 1 (C-u)' })
-vim.keymap.set('n', '<C-i>', '<cmd>lua require("harpoon.ui").nav_file(2)<CR>', { desc = 'Goto mark 2 (C-i)' })
-vim.keymap.set('n', '<C-o>', '<cmd>lua require("harpoon.ui").nav_file(3)<CR>', { desc = 'Goto mark 3 (C-o)' })
-vim.keymap.set('n', '<C-p>', '<cmd>lua require("harpoon.ui").nav_file(4)<CR>', { desc = 'Goto mark 4 (C-p)' })
+vim.keymap.set('n', '<A-y>', '<cmd>lua require("harpoon.ui").nav_file(1)<CR>', { desc = 'Goto mark 1 (A-u)' })
+vim.keymap.set('n', '<A-u>', '<cmd>lua require("harpoon.ui").nav_file(2)<CR>', { desc = 'Goto mark 2 (A-i)' })
+vim.keymap.set('n', '<A-i>', '<cmd>lua require("harpoon.ui").nav_file(3)<CR>', { desc = 'Goto mark 3 (A-o)' })
+vim.keymap.set('n', '<A-o>', '<cmd>lua require("harpoon.ui").nav_file(4)<CR>', { desc = 'Goto mark 4 (A-p)' })
+
+--Tmux navigator
+vim.keymap.set('n', '<C-h>', '<cmd>TmuxNavigateLeft<CR>', { desc = 'Navigate left' })
+vim.keymap.set('n', '<C-j>', '<cmd>TmuxNavigateDown<CR>', { desc = 'Navigate down' })
+vim.keymap.set('n', '<C-k>', '<cmd>TmuxNavigateUp<CR>', { desc = 'Navigate up' })
+vim.keymap.set('n', '<C-l>', '<cmd>TmuxNavigateRight<CR>', { desc = 'Navigate right' })
 
 -- document existing key chains
 require('which-key').register {
