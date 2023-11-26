@@ -181,7 +181,7 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim', opts = {}, event = 'BufRead' },
 
   -- Fuzzy Finder (files, lsp, etc)
   {
@@ -271,6 +271,9 @@ require 'core.lsp_config'
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 require 'core.cmp_config'
+
+-- [[ Configure Lualine ]]
+-- See `:help lualine`
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
