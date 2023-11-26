@@ -11,7 +11,6 @@ return {
 						local inlayhints = require "lsp-inlayhints"
 						inlayhints.on_attach(client, args.buf)
 						vim.keymap.set('n', '<leader>li', inlayhints.toggle, { desc = "Toggle [I]nlay Hints" })
-						print 'inlay hints'
 					end
 				end,
 			})

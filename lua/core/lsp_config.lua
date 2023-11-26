@@ -27,7 +27,7 @@ local on_attach = function(_, bufnr)
 
 	-- See `:help K` for why this keymap
 	nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-	nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+	-- nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
 	-- Lesser used LSP functionality
 	nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
@@ -71,7 +71,11 @@ require('mason-lspconfig').setup {
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-	clangd = {},
+	clangd = {
+		capabilities = {
+			offsetEncoding = "utf-16",
+		}
+	},
 	-- gopls = {},
 	-- pyright = {},
 	-- rust_analyzer = {},
@@ -92,6 +96,7 @@ require('neodev').setup()
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+capabilities.offsetEncoding = "utf-16"
 
 -- Ensure the servers above are installed
 local mason_lspconfig = require 'mason-lspconfig'
