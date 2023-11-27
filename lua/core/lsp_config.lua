@@ -21,7 +21,7 @@ local on_attach = function(_, bufnr)
 	nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 	nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 	nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-	nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
+	nmap('gT', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype [D]efinition')
 	nmap('<leader>ls', require('telescope.builtin').lsp_document_symbols, 'Document [S]ymbols')
 	nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 

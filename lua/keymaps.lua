@@ -11,8 +11,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set('n', '<leader>qf', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>qq', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 --Neogit
 vim.keymap.set('n', '<leader>gg', '<cmd>Neogit<CR>', { desc = 'Open Neogit' })
@@ -33,6 +33,14 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
 --Cuando borre algo en visual o normal mode, no lo ponga en el clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete without copying to clipboard' })
+
+
+-- Buffer
+vim.keymap.set('n', '[b', '<cmd>bprev<CR>', { desc = "Previous buffer" })
+vim.keymap.set('n', ']b', '<cmd>bnext<CR>', { desc = "Next buffer" })
+vim.keymap.set('n', '<leader>b[', '<cmd>bprev<CR>', { desc = "Next buffer  ( [b )" })
+vim.keymap.set('n', '<leader>b]', '<cmd>bnext<CR>', { desc = "Previous buffer  ( ]b )" })
+vim.keymap.set('n', '<leader>bc', '<cmd>bd<CR>', { desc = "Close current buffer" })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -97,6 +105,10 @@ require('which-key').register {
 	['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
 	['<leader>f'] = { name = '[F]ind', _ = 'which_key_ignore' },
 	['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+	['<leader>t'] = { name = '[T]reesitter', _ = 'which_key_ignore' },
+	['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
+	['<leader>q'] = { name = 'Diagnostics', _ = 'which_key_ignore' },
+
 
 	-- Harpoon mappings
 	['<leader>h'] = { name = '[H]arpoon', _ = 'which_key_ignore' },
