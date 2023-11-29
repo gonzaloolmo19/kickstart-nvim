@@ -108,6 +108,7 @@ require('which-key').register {
 	['<leader>t'] = { name = '[T]reesitter', _ = 'which_key_ignore' },
 	['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
 	['<leader>q'] = { name = 'Diagnostics', _ = 'which_key_ignore' },
+	['<leader>m'] = { name = '[M]ake', _ = 'which_key_ignore' },
 
 
 	-- Harpoon mappings
