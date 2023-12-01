@@ -59,6 +59,16 @@ require('mason').setup {}
 require('mason-lspconfig').setup {
 	handlers = {
 		lsp_zero.default_setup,
+		require('lspconfig').clangd.setup({
+			capabilities = {
+				offsetEncoding = "utf-16",
+				print('hello tsserver'),
+				cmd = {
+					"clangd",
+					"--offset-encoding=utf-16",
+				},
+			}
+		})
 	},
 }
 
@@ -72,9 +82,6 @@ require('mason-lspconfig').setup {
 --  define the property 'filetypes' to the map in question.
 local servers = {
 	clangd = {
-		capabilities = {
-			offsetEncoding = "utf-16",
-		}
 	},
 	-- gopls = {},
 	-- pyright = {},
