@@ -53,6 +53,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 	pattern = '*',
 })
 
+-- [[ Quickfix ]]
+
+vim.keymap.set('n', '<leader>qo', '<cmd>copen<CR>', { desc = 'Open quickfix' })
+vim.keymap.set('n', '<leader>qc', '<cmd>cclose<CR>', { desc = 'Close quickfix' })
+
+
 -- [[ Comment.nvim ]]
 -- see :help comment-nvim
 -- Toggle current line or with count
