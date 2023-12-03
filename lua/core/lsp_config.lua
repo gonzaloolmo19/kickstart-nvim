@@ -62,7 +62,6 @@ require('mason-lspconfig').setup {
 		require('lspconfig').clangd.setup({
 			capabilities = {
 				offsetEncoding = "utf-16",
-				print('hello tsserver'),
 				cmd = {
 					"clangd",
 					"--offset-encoding=utf-16",
