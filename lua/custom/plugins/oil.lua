@@ -1,8 +1,10 @@
 return {
-  {
-    'stevearc/oil.nvim',
-    opts = {},
-    -- Optional dependencies
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-  },
+	{
+		'stevearc/oil.nvim',
+		cmd = 'Oil',
+
+		opts = {},
+		-- Optional dependencies
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
+	},
 }

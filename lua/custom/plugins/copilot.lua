@@ -2,7 +2,6 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
-		event = "BufReadPre",
 		opts = { suggestion = { auto_trigger = true, debounce = 150 } },
 	},
 	{

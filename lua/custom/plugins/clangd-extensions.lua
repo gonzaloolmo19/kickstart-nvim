@@ -1,6 +1,7 @@
 return {
 	{
 		"p00f/clangd_extensions.nvim",
+		ft = { "c", "cpp", "objc", "objcpp" },
 		init = function()
 			-- load clangd extensions when clangd attaches
 			local augroup = vim.api.nvim_create_augroup("clangd_extensions", { clear = true })

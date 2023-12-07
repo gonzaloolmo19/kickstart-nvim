@@ -29,6 +29,9 @@ vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<CR>', { desc = 'Toggle Neo
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
+-- [[ Zen Mode]]
+vim.keymap.set('n', '<leader>wz', '<cmd>ZenMode<CR>', { desc = 'Toggle Zen Mode' })
+
 --Sirve para mover lineas en bloque en visual mode
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
