@@ -94,6 +94,9 @@ require('lazy').setup({
       'folke/neodev.nvim',
     },
   },
+  {
+    "ggandor/leap.nvim",
+  },
 
   {
     -- Autocompletion
@@ -277,6 +280,9 @@ require 'core.cmp_config'
 
 -- [[ Autocmds ]]
 require 'autocmd'
+
+-- [[Leap.nvim]]
+require('leap').add_default_mappings()
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
