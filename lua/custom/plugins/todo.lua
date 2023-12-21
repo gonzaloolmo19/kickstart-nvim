@@ -1,7 +1,7 @@
 return {
 	{
 		"folke/todo-comments.nvim",
-		cmd = { "TodoTrouble", "TodoQuickFix", "TodoTelescope", "TodoLocList" },
+		event = "VeryLazy",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {
 			-- your configuration comes here

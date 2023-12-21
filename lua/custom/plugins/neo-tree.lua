@@ -1,8 +1,6 @@
 return {
 	{
 		'nvim-neo-tree/neo-tree.nvim',
-		cmd = 'NeoTree',
-		keys = '<leader>e',
 
 		branch = 'v3.x',
 		dependencies = {
