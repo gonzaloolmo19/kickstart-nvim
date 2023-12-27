@@ -16,6 +16,7 @@ return {
 					enabled = true,
 					font = "+1", -- font size increment
 				},
+				gitsigns = { enabled = true },
 			}
 		}
 	}
