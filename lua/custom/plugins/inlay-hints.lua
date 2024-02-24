@@ -1,7 +1,7 @@
 return {
 	{
 		"lvimuser/lsp-inlayhints.nvim",
-		event = "BufReadPre",
+		ft = { "c", "cpp", "python" },
 		init = function()
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("LspAttach_inlayhints", {}),

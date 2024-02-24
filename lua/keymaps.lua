@@ -14,8 +14,8 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>qf', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>qq', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
---Neogit
-vim.keymap.set('n', '<leader>gg', '<cmd>Neogit<CR>', { desc = 'Open Neogit' })
+--Vim fugitive
+vim.keymap.set('n', '<leader>gg', '<cmd>Git<CR>', { desc = 'Open vim fugitive' })
 
 --Oil.nvim
 -- vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open Oil.nvim' })
