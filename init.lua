@@ -44,6 +44,14 @@ P.S. You can delete this when you're done too. It's your config now :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Cursor gordo
+vim.cmd([[hi Cursor guifg=black guibg=white]])
+vim.cmd([[hi Cursor2 guifg=black guibg=darkcyan]])
+vim.o.guicursor = 'n-v-c:block-Cursor/lCursor,i-ci-ve:block-Cursor2/lCursor2,r-cr:hor20,o:hor50'
+
+
+
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -59,6 +67,8 @@ if not vim.loop.fs_stat(lazypath) then
   }
 end
 vim.opt.rtp:prepend(lazypath)
+
+
 
 -- [[ Configure plugins ]]
 -- NOTE: Here is where you install your plugins.
@@ -95,7 +105,7 @@ require('lazy').setup({
     },
   },
   {
-    "ggandor/leap.nvim",
+    'ggandor/leap.nvim',
   },
 
   {
