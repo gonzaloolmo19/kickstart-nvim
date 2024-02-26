@@ -67,7 +67,7 @@ require('mason-lspconfig').setup {
 					"--offset-encoding=utf-16",
 				},
 			}
-		})
+		}),
 	},
 }
 
@@ -86,6 +86,7 @@ local servers = {
 	pyright = {},
 	rust_analyzer = {},
 	ruff_lsp = {},
+	solargraph = {},
 	-- tsserver = {},
 	-- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
