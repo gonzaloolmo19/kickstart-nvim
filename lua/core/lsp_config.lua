@@ -43,6 +43,10 @@ local on_attach = function(_, bufnr)
 	end, { desc = 'Format current buffer with LSP' })
 end
 
+-- Setup java environment from plugin nvim-java
+require('java').setup()
+
+
 -- mason-lspconfig requires that these setup functions are called in this order
 -- before setting up the servers.
 local lsp_zero = require 'lsp-zero'
@@ -80,13 +84,16 @@ require('mason-lspconfig').setup {
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-	clangd = {
-	},
+	clangd = {},
 	-- gopls = {},
 	pyright = {},
 	rust_analyzer = {},
 	ruff_lsp = {},
 	solargraph = {},
+	hls = {},
+	marksman = {},
+	taplo = {},
+
 	-- tsserver = {},
 	-- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
