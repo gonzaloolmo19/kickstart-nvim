@@ -18,10 +18,12 @@ vim.keymap.set('n', '<leader>qq', vim.diagnostic.setloclist, { desc = 'Open diag
 vim.keymap.set('n', '<leader>gg', '<cmd>Git<CR>', { desc = 'Open vim fugitive' })
 
 --Oil.nvim
--- vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open Oil.nvim' })
+vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open Oil.nvim' })
 
 --Voy a probar el plugin de mini.files
-vim.keymap.set('n', '-', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Open MiniFiles' })
+-- vim.keymap.set('n', '-', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Open MiniFiles' })
+
+
 --Neo-tree
 vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<CR>', { desc = 'Toggle Neo-tree' })
 
