@@ -95,6 +95,14 @@ vim.keymap.set('n', '<leader>u', '<cmd>UndotreeToggle<CR>', { desc = 'UndoTree' 
 -- [[TODO.nvim]]
 vim.keymap.set('n', '<leader>ft', '<cmd>TodoTelescope<CR>', { desc = '[F]ind [T]odos' })
 
+-- [[dispatch.vim]]
+vim.keymap.set('n', '<leader>md', ':Dispatch ', { desc = '<cmd>Dispatch (args)' })
+vim.keymap.set('n', '<leader>mD', ':Dispatch! ', { desc = '<cmd>Dispatch! (args)' })
+vim.keymap.set('n', '<leader>m<Space>', ':Make ', { desc = '<cmd>Make (args)' })
+vim.keymap.set('n', '<leader>m<CR>', '<cmd>Make<CR>', { desc = "<cmd>Make" })
+vim.keymap.set('n', '<leader>ms', ':Start ', { desc = "<cmd>Start (args)" })
+vim.keymap.set('n', '<leader>mf', ':FocusDispatch ', { desc = "<cmd>FocusDispatch (args)" })
+
 -- document existing key chains
 require('which-key').register {
 	['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
