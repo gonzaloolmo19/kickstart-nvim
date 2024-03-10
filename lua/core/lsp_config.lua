@@ -15,15 +15,16 @@ local on_attach = function(_, bufnr)
 		vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
 	end
 
-	nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-	nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+	nmap('<leader>lr', vim.lsp.buf.rename, '[R]ename')
+	nmap('<leader>la', vim.lsp.buf.code_action, 'Code [A]ction')
 
 	nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 	nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 	nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
 	nmap('gT', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype [D]efinition')
-	nmap('<leader>ls', require('telescope.builtin').lsp_document_symbols, 'Document [S]ymbols')
-	nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+	nmap('<leader>ld', require('telescope.builtin').lsp_document_symbols, '[D]ocument Symbols')
+	nmap('<leader>lw', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace Symbols')
+	nmap('<leader>lf', '<cmd>Format<CR>', '[F]ormat current buffer')
 
 	-- See `:help K` for why this keymap
 	nmap('K', vim.lsp.buf.hover, 'Hover Documentation')

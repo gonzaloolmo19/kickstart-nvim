@@ -10,12 +10,14 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>qf', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>qq', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set('n', '<leader>qf', vim.diagnostic.open_float, { desc = 'Open [F]loating diagnostic message' })
+vim.keymap.set('n', '<leader>ql', vim.diagnostic.setloclist, { desc = 'Open diagnostic [L]ocation list' })
 -- [[ Quickfix ]]
-vim.keymap.set('n', '<leader>qo', '<cmd>copen<CR>', { desc = 'Open quickfix' })
-vim.keymap.set('n', '<leader>qc', '<cmd>cclose<CR>', { desc = 'Close quickfix' })
-
+vim.keymap.set('n', '<leader>qo', '<cmd>copen<CR>', { desc = '[O]pen quickfix' })
+vim.keymap.set('n', '<leader>qc', '<cmd>cclose<CR>', { desc = '[C]lose quickfix' })
+-- TODO: Poner mappings para la location list
+vim.keymap.set('n', '<leader>wo', '<cmd>lopen<CR>', { desc = '[O]pen location list' })
+vim.keymap.set('n', '<leader>wc', '<cmd>lclose<CR>', { desc = '[C]lose location list' })
 
 --Vim fugitive
 vim.keymap.set('n', '<leader>gg', '<cmd>Git<CR>', { desc = 'Open vim fugitive' })
@@ -35,7 +37,11 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 -- [[ Zen Mode]]
-vim.keymap.set('n', '<leader>wz', '<cmd>ZenMode<CR>', { desc = 'Toggle Zen Mode' })
+vim.keymap.set('n', '<leader>zz', '<cmd>ZenMode<CR>', { desc = 'Toggle Zen Mode' })
+
+-- [[ Copilot ]]
+vim.keymap.set('n', '<leader>ze', '<cmd>Copilot enable<CR>', { desc = '[E]nable Copilot' })
+vim.keymap.set('n', '<leader>zd', '<cmd>Copilot disable<CR>', { desc = '[D]isable Copilot' })
 
 --Sirve para mover lineas en bloque en visual mode
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
@@ -110,9 +116,10 @@ require('which-key').register {
 	['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
 	['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
 	['<leader>f'] = { name = '[F]ind', _ = 'which_key_ignore' },
-	['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+	['<leader>w'] = { name = 'Location list', _ = 'which_key_ignore' },
 	['<leader>t'] = { name = '[T]reesitter', _ = 'which_key_ignore' },
 	['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
 	['<leader>q'] = { name = 'Diagnostics', _ = 'which_key_ignore' },
 	['<leader>m'] = { name = '[M]ake', _ = 'which_key_ignore' },
+	['<leader>z'] = { name = 'Miscelaneous', _ = 'which_key_ignore' },
 }
