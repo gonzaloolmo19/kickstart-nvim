@@ -90,7 +90,7 @@ local servers = {
 	rust_analyzer = {},
 	ruff_lsp = {},
 	solargraph = {},
-	hls = {},
+	-- hls = {},
 	marksman = {},
 	taplo = {},
 
