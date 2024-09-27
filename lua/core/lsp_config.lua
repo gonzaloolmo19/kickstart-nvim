@@ -45,6 +45,7 @@ local on_attach = function(_, bufnr)
 end
 
 
+
 -- mason-lspconfig requires that these setup functions are called in this order
 -- before setting up the servers.
 local lsp_zero = require 'lsp-zero'
@@ -85,7 +86,6 @@ local servers = {
 	clangd = {},
 	-- gopls = {},
 	pyright = {},
-	rust_analyzer = {},
 	ruff_lsp = {},
 	solargraph = {},
 	-- hls = {},
